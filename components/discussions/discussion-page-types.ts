@@ -59,27 +59,27 @@ import Club from "@/types/Club";
 //   replyCount: 45,
 // };
 
-export const clubData: Club = {
-  name: "Classic Literature Club",
-  bio: "A community dedicated to discussing timeless literary works and their impact on society. Share your insights and engage in meaningful conversations about literature.",
-  memberCount: 41320,
-  onlineCount: 9,
-  rank: "Top 3%",
-  createdAt: "2023-01-15",
-  isPublic: true,
-  rules: [
-    "Be Respectful",
-    "Stay on Topic",
-    "No Spam",
-    "No Personal Details",
-    "Use Search",
-    "Read the sticky thread",
-    "No Disinformation",
-    "No Sexual Content",
-    "Follow club etiquette",
-  ],
-  moderators: [
-    { name: "BookMaster", avatar: "/placeholder.svg?height=30&width=30" },
-    { name: "LitPro", avatar: "/placeholder.svg?height=30&width=30" },
-  ],
-};
+// export const clubData: Club = {
+//   name: "Classic Literature Club",
+//   bio: "A community dedicated to discussing timeless literary works and their impact on society. Share your insights and engage in meaningful conversations about literature.",
+//   memberCount: 41320,
+//   onlineCount: 9,
+//   rank: "Top 3%",
+//   createdAt: "2023-01-15",
+//   isPublic: true,
+//   rules: [
+//     "Be Respectful",
+//     "Stay on Topic",
+//     "No Spam",
+//     "No Personal Details",
+//     "Use Search",
+//     "Read the sticky thread",
+//     "No Disinformation",
+//     "No Sexual Content",
+//     "Follow club etiquette",
+//   ],
+//   moderators: [
+//     { name: "BookMaster", avatar: "/placeholder.svg?height=30&width=30" },
+//     { name: "LitPro", avatar: "/placeholder.svg?height=30&width=30" },
+//   ],
+// };
