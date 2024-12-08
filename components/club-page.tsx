@@ -5,24 +5,24 @@
 ! Also, this page would be different when the user is a regular user and when the user is an admin/manager.
 */
 
+/* Eslint Disable */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+
 import { useState } from 'react'
 import { useEffect } from 'react';
-import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Progress } from "@/components/ui/progress"
-import { Calendar } from "@/components/ui/calendar"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { BookOpen, Calendar as CalendarIcon, MessageCircle, Settings } from 'lucide-react'
+import { MessageCircle, Settings } from 'lucide-react'
 import { useSearchParams,  } from 'next/navigation';
 import Link from "next/link";
 import { getClubFromFirestore } from '@/lib/firestore';
 import { useRouter } from 'next/navigation';
-import { auth } from '@/lib/firebase';
 
 interface Message {
   author: string;

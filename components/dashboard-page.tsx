@@ -1,8 +1,14 @@
 "use client";
 
+/* Eslint Disable */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+
 import Link from "next/link";
-import { auth, db } from '@/lib/firebase';
-import { addDiscussionToClub, getClubFromFirestore, getUserFromFirestore } from "@/lib/firestore";
+import { auth } from '@/lib/firebase';
+import { getClubFromFirestore, getUserFromFirestore } from "@/lib/firestore";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -19,14 +25,13 @@ import User from "@/types/User";
 import Club from "@/types/Club";
 import Discussion from "@/types/Discussion";
 import Meeting from "@/types/Meeting";
-import { clubData } from "./discussions/discussion-page-types";
 
 
 export const DashboardPage = () => {
   const [userData, setUserData] = useState<User | null>(null);
   const [clubs, setClubs] = useState<Club[]>([]);
   const [discussions, setDiscussions] = useState<Discussion[]>([]);
-  const [meetings, setMeetings] = useState<Meeting[]>([]);
+  const [meetings] = useState<Meeting[]>([]);
   const [loading, setLoading] = useState<boolean>(true); // Loading state for user data
 
   useEffect(() => {

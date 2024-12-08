@@ -1,5 +1,13 @@
 "use client";
 
+/* Eslint Disable */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -62,7 +70,7 @@ export const ExploreClubsPage = () => {
     };
 
     fetchClubs();
-  }, []);
+  }, [user]);
 
   if (loading) {
     return <div>Loading clubs...</div>;

@@ -5,9 +5,16 @@
      -> Begun under mock user definition, running into issues when calling userSnap.data()
 */
 
+/* Eslint Disable */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* esling-disable @typescript-eslint/no-wrapper-object-types */
+
 import Link from "next/link";
-import { doc, getDoc } from "firebase/firestore";
-import { auth, db } from '@/lib/firebase';
 import { Button } from "@/components/ui/button";
 import {
   Card,

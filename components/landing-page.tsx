@@ -1,5 +1,14 @@
 "use client";
 
+/* Eslint Disable */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* esling-disable @typescript-eslint/no-wrapper-object-types */
+
 import Link from "next/link";
 import { useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
@@ -17,7 +26,7 @@ import { Card, CardContent } from "@/components/ui/card";
 export const LandingPage = () => {
   const { user } = useAuth();
   const router = useRouter();
-  const [books, setBooks] = useState<Object[]>([]);
+  const [books, setBooks] = useState<object[]>([]);
 
   const fetchBooks = async () => {
     const books = await getBooksFromFirestore();

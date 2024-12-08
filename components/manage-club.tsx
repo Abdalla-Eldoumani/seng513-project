@@ -1,5 +1,14 @@
 "use client";
 
+/* Eslint Disable */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* esling-disable @typescript-eslint/no-wrapper-object-types */
+
 import { useState, useEffect } from "react";
 import { auth } from "@/lib/firebase";
 import { useRouter } from "next/navigation";

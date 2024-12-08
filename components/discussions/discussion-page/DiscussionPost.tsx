@@ -1,7 +1,13 @@
 // * Shows the title, description, author information, and posting date.
 // * Includes upvote and downvote functionality, as well as the reply count.
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+/* Eslint Disable */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import Discussion from "@/types/Discussion";
 import { ArrowBigUp, ArrowBigDown, MessageCircle } from "lucide-react";

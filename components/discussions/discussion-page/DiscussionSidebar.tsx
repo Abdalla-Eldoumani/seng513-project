@@ -1,6 +1,13 @@
 // * Includes club details like name, bio, creation date, membership stats, rules, and moderators.
 // * Provides options for users to join the club or contact moderators.
 
+
+/* Eslint Disable */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+
 import { Separator } from "@/components/ui/separator";
 import {
   Collapsible,

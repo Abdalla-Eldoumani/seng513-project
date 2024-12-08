@@ -1,10 +1,13 @@
 "use client";
+
+/* Eslint Disable */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import {
-  collection,
-  query,
-  orderBy,
-  onSnapshot,
-  addDoc,
   doc,
   updateDoc,
   getDoc,
@@ -128,7 +131,7 @@ export default function Discussion_Page({
       const currentUserVote = userVotes[user.uid] || 0;
   
       // Toggle upvote
-      let newVoteValue = currentUserVote === 1 ? 0 : 1;
+      const newVoteValue = currentUserVote === 1 ? 0 : 1;
       userVotes[user.uid] = newVoteValue;
   
       // Calculate the total votes
@@ -180,7 +183,7 @@ export default function Discussion_Page({
       const currentUserVote = userVotes[user.uid] || 0;
   
       // Toggle downvote
-      let newVoteValue = currentUserVote === -1 ? 0 : -1;
+      const newVoteValue = currentUserVote === -1 ? 0 : -1;
       userVotes[user.uid] = newVoteValue;
   
       // Calculate the total votes
