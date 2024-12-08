@@ -23,14 +23,20 @@ import { Label } from "@/components/ui/label";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 
+interface Book {
+  title: string;
+  author: string;
+  photoURL: string;
+}
+
 export const LandingPage = () => {
   const { user } = useAuth();
   const router = useRouter();
-  const [books, setBooks] = useState<object[]>([]);
+  const [books, setBooks] = useState<Book[]>([]);
 
   const fetchBooks = async () => {
     const books = await getBooksFromFirestore();
-    setBooks(books);
+    setBooks(books as unknown as Book[]);
   };
   fetchBooks();
   const [avatarURL, setAvatarURL] = useState("");
