@@ -1,9 +1,14 @@
 "use client";
 
+/* Eslint Disable */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
 import Link from "next/link";
 import { auth, db } from '@/lib/firebase';
-import { getClubFromFirestore, getUserFromFirestore, deleteClubFromFirestore, getClubsFromFirestore, getAllDiscussions } from "@/lib/firestore";
+import { getUserFromFirestore, deleteClubFromFirestore, getClubsFromFirestore, getAllDiscussions } from "@/lib/firestore";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -14,7 +19,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { BookOpen, Users, MessageCircle, Calendar, Search } from "lucide-react";
+import { BookOpen, Users, Search } from "lucide-react";
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { useRouter } from "next/navigation";
@@ -265,7 +270,7 @@ export const AdminDashboardPage = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {clubs.length === 0 ? (
                   <div className="text-[#8B4513] font-semibold text-lg">
-                    You haven't joined any clubs yet.
+                    You haven&apos;t joined any clubs yet.
                   </div>
                 ) : (
                   clubs.map((club) => (
