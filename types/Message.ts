@@ -1,5 +1,5 @@
 type Message = {
-    id?: string,
+    id?: string | undefined;
     author: string;
     content: string[];
     timestamp: string; // ISO string

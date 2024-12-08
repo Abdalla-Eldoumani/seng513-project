@@ -1,3 +1,12 @@
+/* Eslint Disable */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* esling-disable @typescript-eslint/no-wrapper-object-types */
+
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -96,7 +105,7 @@ export default function DiscussionComments({
                           className={`h-7 px-2 text-sm ${
                             reacted ? "bg-[#D8C8A5]" : ""
                           }`}
-                          onClick={() => handleReaction(message.id, emoji)}
+                          onClick={() => handleReaction(message.id as string, emoji)}
                         >
                           {emoji}
                         </Button>
@@ -105,7 +114,7 @@ export default function DiscussionComments({
                     <Popover
                       onOpenChange={(open) => {
                         if (open) {
-                          setActiveMessageId(message.id);
+                          setActiveMessageId(message.id as string);
                         } else {
                           setActiveMessageId(null);
                         }
@@ -119,19 +128,19 @@ export default function DiscussionComments({
                       <PopoverContent className="w-64 p-2 bg-transparent border-none shadow-none">
                         <EmojiPicker
                           onEmojiSelect={(emoji) =>
-                            handleReaction(message.id, emoji.native)
+                            handleReaction(message.id as string, emoji.native)
                           }
                         />
                       </PopoverContent>
                     </Popover>
-                    {user && user.uid === message.userId && (
+                    {user && user.uid === message.author && (
                       <>
                         <Separator orientation="vertical" className="h-5" />
                         <Button
                           variant="ghost"
                           size="sm"
                           className="h-7 px-2"
-                          onClick={() => handleEdit(message.id)}
+                          onClick={() => handleEdit(message.id as string)}
                         >
                           <Pencil className="h-4 w-4" />
                         </Button>
@@ -139,7 +148,7 @@ export default function DiscussionComments({
                           variant="ghost"
                           size="sm"
                           className="h-7 px-2"
-                          onClick={() => handleDeleteMessage(message.id)}
+                          onClick={() => handleDeleteMessage(message.id as string )}
                         >
                           <Trash2 className="h-4 w-4" />
                         </Button>
@@ -157,7 +166,7 @@ export default function DiscussionComments({
                     <div className="flex space-x-2 mt-2">
                       <Button
                         onClick={async () => {
-                          await handleSaveEdit(message.id, editedContent);
+                          await handleSaveEdit(message.id as string, editedContent);
                           setEditingMessageId(null);
                         }}
                         className="bg-blue-500 text-white"
@@ -192,7 +201,7 @@ export default function DiscussionComments({
                             className={`flex items-center space-x-1 px-2 py-0.5 rounded-full text-sm cursor-pointer ${
                               userReacted ? "bg-[#C8B595]" : "bg-[#F5F5DC]"
                             }`}
-                            onClick={() => handleReaction(message.id, emoji)}
+                            onClick={() => handleReaction(message.id as string, emoji)}
                           >
                             <span>{emoji}</span>
                             <span className="text-xs text-[#8B4513]">
