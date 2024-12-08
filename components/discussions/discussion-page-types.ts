@@ -1,5 +1,14 @@
 // * contains all the TypeScript interfaces and mock data
 
+/* Eslint Disable */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* esling-disable @typescript-eslint/no-wrapper-object-types */
+
 import Club from "@/types/Club";
 
 // export interface DiscussionData {
