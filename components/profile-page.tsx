@@ -32,7 +32,7 @@ import { deleteUser } from "firebase/auth";
 import { deleteUserFromFirestore, getAllAvatarURLsFromFirestore } from "@/lib/firestore";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-
+import { User } from "firebase/auth";
 export const ProfilePage = () => {
   const { user, signOut } = useAuth();
   const router = useRouter();
@@ -114,7 +114,7 @@ export const ProfilePage = () => {
 
     try {
       await deleteUserFromFirestore(user.uid);
-      await deleteUser(user);
+      await deleteUser(user as User);
       toast.success("Account deleted successfully!");
       window.location.href = "/";
     } catch (error) {
